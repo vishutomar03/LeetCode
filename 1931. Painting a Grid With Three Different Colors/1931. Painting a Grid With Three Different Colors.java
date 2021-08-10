@@ -9,7 +9,7 @@ class Solution {
         
             for(int j = 0; j < m; j++){
                 for(int k = 0; k < 1024; k++){
-                    dp[j][k] =-1; 
+                    dp[j][k] =-1;
                 }                          
             }
         
@@ -32,7 +32,7 @@ class Solution {
         
         for(int k = 1; k <= 3; k++){
             if(k!=up && k!=left){
-                opt = (opt%MOD + ans(i+1, j, prev,  curr ^ (k<<(2*i))) % MOD) % MOD;
+                opt = (opt%MOD + ans(i+1, j, prev,  curr + (k<<(2*i))) % MOD) % MOD;
             }
         }
         if(i==0)
