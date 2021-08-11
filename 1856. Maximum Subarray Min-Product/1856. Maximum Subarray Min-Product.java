@@ -6,6 +6,7 @@ class Solution {
         int[] l = new int[n];
         int[] r = new int[n];
         long[] prefix = new long[n];
+        long ans = 0;
         prefix[0] = arr[0];
         
         for(int i = 0; i <  n; i++){
@@ -39,8 +40,7 @@ class Solution {
             }
             right.add(new answer(arr[i], i));
         }
-        long ans = 0;
-        
+     
         for(int i = 0; i < n; i++){
             l[i]++;
             r[i]--;
@@ -51,7 +51,7 @@ class Solution {
                 ans = Math.max(ans, (prefix[r[i]] - prefix[l[i]-1]) *(long) arr[i]);
             }
         }
-        ans %=MOD;
+        ans %= MOD;
         return (int)ans;
     }
     
