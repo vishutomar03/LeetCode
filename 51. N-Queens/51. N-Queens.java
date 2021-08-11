@@ -8,7 +8,7 @@ class Solution {
         return list;
     }
     public void ans(int index){
-        if(index==n){
+        if(index == n){
             ArrayList<String> arr = new ArrayList<>();
             StringBuilder s;
             int ab;
