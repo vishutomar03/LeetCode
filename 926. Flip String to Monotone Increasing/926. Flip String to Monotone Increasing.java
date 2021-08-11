@@ -2,14 +2,14 @@ class Solution {
     public int minFlipsMonoIncr(String s) {
         char[] arr = s.toCharArray();
         int a = 0, ans, n;
-        n = arr.length;
+        n = arr.length; // length of the array
         for(int i = 0; i < n; i++){
             if(arr[i]=='1'){
                 a++;
             }
         }        
         ans = a;
-        int b = 0;
+        int b = 0; // counter variable 
         for(int i = n-1; i >= 0; i--){
             if(arr[i]=='0'){
                 b++;
@@ -20,6 +20,6 @@ class Solution {
                 ans = Math.min(ans, b+a);
             }
         }
-        return ans;
+        return ans; // minimum number of flips
     }
 }
