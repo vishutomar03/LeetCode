@@ -9,20 +9,17 @@ class Solution {
         time = hour;
         l = 0;
         r = 10000001;
-        while(l+1< r) {
+        while(l + 1 < r) {
             mid = (l + r)/2;
-            if(!ans(mid)){
+            if(!ans(mid))
                 l = mid;
-            }
-            else{
+            else
                 r = mid;
-            }
         }
-        if(r==10000001)
+        if(r == 10000001)
             return -1;
         return r;
     }    
-    
     public boolean ans(int mid){
         double a = 0;
         for(int i = 0; i < n - 1; i++){
