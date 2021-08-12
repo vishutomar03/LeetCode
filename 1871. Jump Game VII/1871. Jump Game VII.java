@@ -10,7 +10,7 @@ class Solution {
                 ar.add(i);
             }
         }
-        
+
         if(arr[n-1] !='0'){
             return false;
         }
@@ -24,8 +24,7 @@ class Solution {
                     set.add(i);
                 }
             }
-        }
-        
+        }        
         return set.contains(0);
     }
 }
