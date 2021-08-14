@@ -22,6 +22,7 @@ class Solution {
         }
         return ans;
     }
+    
     static class answer implements Comparable<answer>{
         int a;
         int b;
