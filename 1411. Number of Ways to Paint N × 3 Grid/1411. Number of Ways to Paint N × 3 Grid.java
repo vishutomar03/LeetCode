@@ -3,8 +3,7 @@ class Solution {
     int n;
     long[][] dp = new long[63][5005];
     public int numOfWays(int a) {
-        n = a;
-        
+        n = a;        
         for(int i = 0; i < 63; i++){
             for(int j = 0; j < n; j++){
                 dp[i][j] = -1;
@@ -15,12 +14,10 @@ class Solution {
     public long ans(int i, int j, int prev, int curr){
         if(j==3){
             return ans(i+1, 0, curr, 0);
-        }
-        
+        }        
         if(i==n){
             return 1;
-        }
-        
+        }        
         if(dp[prev][i]!=-1){
             return dp[prev][i];
         }
