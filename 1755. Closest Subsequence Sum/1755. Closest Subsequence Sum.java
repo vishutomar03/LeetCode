@@ -39,16 +39,13 @@ class Solution {
             }
             
         }
-        
-        
         return min;
     }
     public void ans(int index, long sum, int n, ArrayList<Long> array){
         if(index>=n){
             array.add(sum);
             return;
-        }
-        
+        }        
         ans(index + 1, sum + arr[index], n, array);
         ans(index + 1, sum, n, array);
     }
