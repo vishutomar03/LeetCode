@@ -15,7 +15,6 @@ class NumArray {
                 st[i][j] = st[i][j-1] + st[i+(1<<(j-1))][j-1];
             }
         }
-        
     }
     
     public int sumRange(int left, int right) {
