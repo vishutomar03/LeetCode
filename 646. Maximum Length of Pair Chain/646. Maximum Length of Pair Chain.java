@@ -2,15 +2,13 @@ class Solution {
     public int findLongestChain(int[][] pairs) {
         int n = pairs.length;
         answer[] arr = new answer[n];
+        int[] dp = new int[1005];
         
         for(int i = 0; i < n; i++){
             arr[i] = new answer(pairs[i][0], pairs[i][1]);
         }
         
         Arrays.sort(arr);
-        
-        int[] dp = new int[1005];
-        
         dp[0] = 1;
         int max = 0;
         for(int i = 1; i < n; i++){
@@ -28,9 +26,9 @@ class Solution {
         for(int i = 0; i < n; i++){
             max = Math.max(max, dp[i]);
         }
-        return max;
-        
+        return max;   
     }
+    
     public class answer implements Comparable<answer>{
         int a, b;
         public answer(int a, int b){
