@@ -1,14 +1,15 @@
 class Solution {
     public int countPalindromicSubsequence(String s) {
         Map<Character, ArrayList<Integer>> map = new HashMap<>();
+        int[] arr = new int[26];
+        
         for(int i = 0; i < s.length(); i++){
             if(map.getOrDefault(s.charAt(i), null)==null){
                 map.put(s.charAt(i), new ArrayList<Integer>());
             }
             map.get(s.charAt(i)).add(i);
         }
-        int[] arr = new int[26];
-        
+                
         int ans = 0, b = 0;
         for(Character c: map.keySet()){
             if(map.get(c).size()==1){
@@ -39,7 +40,5 @@ class Solution {
         }
         
         return ans;
-        
-        
     }
 }
