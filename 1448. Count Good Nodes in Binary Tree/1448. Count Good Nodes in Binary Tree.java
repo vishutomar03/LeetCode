@@ -23,7 +23,7 @@ class Solution {
         }
         int opt = 0;
         if(root.val >= maxVal){
-            opt = 1;
+            opt += 1;
         }
         opt += dfs(root.left, Math.max(maxVal, root.val));
         opt += dfs(root.right, Math.max(maxVal, root.val));
