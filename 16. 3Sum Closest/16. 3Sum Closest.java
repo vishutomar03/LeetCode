@@ -41,11 +41,8 @@ class Solution {
                         ans = arr[i] + arr[j] + arr[l];
                     }
                 }
-        
             }
         }
-        
         return ans;
-        
     }
 }
