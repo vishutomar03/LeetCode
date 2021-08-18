@@ -24,7 +24,6 @@ class Solution {
         ans(root);
         return ans;
     }
-    
     public void ans(TreeNode root){
         if(root==null){
             return;
@@ -43,8 +42,7 @@ class Solution {
         else{
             ans(root.left);
         }   
-    }
-    
+    }   
     public int height(TreeNode root){
         if(root==null){
             return -1;
