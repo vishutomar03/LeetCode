@@ -2,15 +2,13 @@ class Solution {
     public String longestPalindrome(String s) {
         int n;
         n = s.length();
+        char[] arr = s.toCharArray();
         
         if(n==1){
             return s;
         }
         
-        char[] arr = s.toCharArray();
-        
-        int ans = 0;
-        int a, b = 0, c = 0, d = 0, j , k;
+        int a, b = 0, c = 0, d = 0, j , k, ans = 0;
         
         for(int i = 1; i < n; i++){
             a = 0;
@@ -52,7 +50,6 @@ class Solution {
                         c = k;
                     }
             }
-       
         }
         return s.substring(b,c);
     }
