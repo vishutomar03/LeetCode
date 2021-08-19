@@ -7,9 +7,8 @@ class Solution {
         length = message.length();
         dp = new int[length + 1];
         
-        
-        for(int j = 0; j  <= length; j++){
-            dp[j] = -1;
+        for(int i = 0; i <= length; i++){
+            dp[i] = -1;
         }
         return noOfWays(0);
     }
@@ -28,7 +27,6 @@ class Solution {
         if(index + 1 < length && Integer.parseInt(arr[index]+""+arr[index + 1]) <= 26){
             opt += noOfWays(index +  2);
         }
-        return dp[index] = opt;
-        
+        return dp[index] = opt;   
     }
 }
