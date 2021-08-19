@@ -64,7 +64,6 @@ class Solution {
                     opt = (opt%MOD + noOfWays(index +  2)%MOD)%MOD;
                 }
             }
-            
         }
         return dp[index] = opt%MOD;
     }
