@@ -34,7 +34,6 @@ class Solution {
             root.right = dfs(root.right, key);
             return root;
         }
-        
         if(key <= root.val){
             root.left = dfs(root.left, key);
         }
