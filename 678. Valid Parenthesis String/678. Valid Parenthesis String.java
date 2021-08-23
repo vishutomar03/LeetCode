@@ -15,9 +15,7 @@ class Solution {
         }
         
         return ans(0,0,0)==1? true: false;
-        
     }
-    
     public int ans(int index, int a, int b){
         if(index>=n){
             if(a==b){
@@ -46,7 +44,6 @@ class Solution {
                 opt = ans(index + 1, a, b+1);
             }
         }
-        
         return dp[index][a][b] = opt;
     }
 }
