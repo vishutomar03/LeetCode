@@ -5,7 +5,7 @@ class Solution {
         int[] dp = new int[n];
         dp[0] = arr[0];
         stack.push(0);
-        result+=dp[0];
+        result += dp[0];
         
         for (int i = 1; i < n; i++) {
             while (stack.size() != 0 && arr[i] <= arr[stack.peek()]) {
