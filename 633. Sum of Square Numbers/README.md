@@ -1,4 +1,4 @@
-
+<h2>633. Sum of Square Numbers</h2><h3>Medium</h3><hr>
 <div><p>Given a non-negative integer <code>c</code>, decide whether there're two integers <code>a</code> and <code>b</code> such that <code>a<sup>2</sup> + b<sup>2</sup> = c</code>.</p>
 
 <p>&nbsp;</p>
