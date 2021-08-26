@@ -37,8 +37,7 @@ class Solution {
         }
         
         int index = ans((1<<m) -1, 0);
-        ans = new int[index];
-        
+        ans = new int[index];    
         path((1<<m) -1, 0);
         return ans;
     }
