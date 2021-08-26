@@ -1,3 +1,4 @@
+<h2>1493. Longest Subarray of 1's After Deleting One Element</h2><h3>Medium</h3><hr>
 <div><p>Given a binary array <code>nums</code>, you should delete one element from it.</p>
 
 <p>Return the size of the longest non-empty subarray containing only 1's&nbsp;in the resulting array.</p>
