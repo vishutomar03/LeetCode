@@ -3,9 +3,9 @@ class Solution {
         int n = arr.length, j = 0, a = 0, ans = 0;
 
         for(int i = 0; i < n; i++){
-            if(arr[i]==0){
-                if(a!=0){
-                    while(arr[j]!=0){
+            if(arr[i] == 0){
+                if(a != 0){
+                    while(arr[j] != 0){
                         j++;
                     }
                     j++;
