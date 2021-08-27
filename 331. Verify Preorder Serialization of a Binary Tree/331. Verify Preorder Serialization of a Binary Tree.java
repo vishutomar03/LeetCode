@@ -18,12 +18,12 @@ class Solution {
         
         n = arr.size();
         
-        if(n%2==0)
+        if(n % 2 == 0)
             return false;
         
         ans();
     
-        if(index + 1==n)
+        if(index + 1 == n)
             return true;
         return false;
         
@@ -42,5 +42,4 @@ class Solution {
         index++;
         ans(); 
     }
-    
 }
