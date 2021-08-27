@@ -11,13 +11,14 @@ class Solution {
             p = s.length();
             for(int j = 0; j < n; j++){
                 if(i!=j){
+                    s1 = strs[j];
+                    q = s1.length();
                     for(int k = 0; k < 15; k++){
                         for(int l = 0; l < 15; l++){
                             dp[k][l] = -1;
                         }
                     }
-                    s1 = strs[j];
-                    q = s1.length();
+                    
                     if(ans(0,0) == p){
                         a++;
                     }
