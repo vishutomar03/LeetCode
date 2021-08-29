@@ -9,13 +9,9 @@ class Solution {
         arr = nums;
         Arrays.sort(arr);
         n = arr.length;
-        
         ans(0, 0);
-        
         return list;
-        
     }
-    
     public void ans(int index, int a){
         if(index>=n){
             array = new ArrayList<>();
