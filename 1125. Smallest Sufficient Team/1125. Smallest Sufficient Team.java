@@ -16,7 +16,7 @@ class Solution {
                 dp[i][j] = 1000;
             }
         }
-                
+              
         for(int i = 0; i < n; i++){
             a = 0;
             b = 1;
