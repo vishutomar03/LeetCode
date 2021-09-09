@@ -23,7 +23,7 @@ class Solution {
                 else if(min1.charAt(j) < s.charAt(l))
                     break;
             }
-        }
+        } 
         return min1;
     }
 }
