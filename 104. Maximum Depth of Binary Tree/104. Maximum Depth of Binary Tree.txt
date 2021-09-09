@@ -18,7 +18,7 @@ class Solution {
         if(root == null){
             return 0;
         }
-        int opt;
+        int opt; 
         opt = 1 + maxDepth(root.left);
         opt = Math.max(opt, 1 + maxDepth(root.right));
         return opt;
