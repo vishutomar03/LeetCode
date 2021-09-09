@@ -1,0 +1,29 @@
+class Solution {
+    public String orderlyQueue(String s, int k) {
+        StringBuilder s1 = new StringBuilder("");
+        char[] arr = s.toCharArray();
+        Arrays.sort(arr);
+    
+        if(k!=1){
+            for(Character c: arr){
+                s1.append(c);
+            } 
+             return s1.toString();
+        }
+        
+        String min1 = s;
+        s = s + s;
+        int n = min1.length();
+        for(int i = 0; i < n; i++){
+            for(int j = 0, l = i; j < n; j++, l++){ 
+                if(min1.charAt(j) > s.charAt(l)){
+                    min1 = s.substring(i, i + n);
+                    break;
+                }
+                else if(min1.charAt(j) < s.charAt(l))
+                    break;
+            }
+        }
+        return min1;
+    }
+}
