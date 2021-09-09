@@ -6,8 +6,9 @@ class Solution {
             if(i==0){
                 arr[keysPressed.charAt(i) - 'a'] = releaseTimes[i];
             }
-            else
+            else{
                 arr[keysPressed.charAt(i) - 'a'] = Math.max(arr[keysPressed.charAt(i) - 'a'], releaseTimes[i] - releaseTimes[i - 1]);
+            }
             max = Math.max(max, arr[keysPressed.charAt(i) - 'a']);
         }
         for(int i = 25; i>=0; i--){
