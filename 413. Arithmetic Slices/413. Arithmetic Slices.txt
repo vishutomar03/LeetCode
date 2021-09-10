@@ -9,7 +9,7 @@ class Solution {
         }
         for(Integer i : dp){
             ans+=i;
-        }
+        } 
         return ans;
     }
 }
