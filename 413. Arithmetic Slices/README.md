@@ -1,3 +1,4 @@
+<h2>413. Arithmetic Slices</h2><h3>Medium</h3><hr>
 <div><p>An integer array is called arithmetic if it consists of <strong>at least three elements</strong> and if the difference between any two consecutive elements is the same.</p>
 
 <ul>
