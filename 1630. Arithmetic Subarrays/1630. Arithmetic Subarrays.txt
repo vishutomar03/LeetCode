@@ -1,0 +1,30 @@
+class Solution {
+    public List<Boolean> checkArithmeticSubarrays(int[] arr, int[] l, int[] r) {
+        int m = l.length, a;
+        int[] array;
+        List<Boolean> list = new ArrayList<>();
+        for(int i = 0; i < m; i++){
+            a = 0;
+            array = new int[r[i] - l[i] + 1];
+            for(int j = l[i], k = 0; j <= r[i]; j++, k++){
+                array[k] = arr[j];
+            }
+            Arrays.sort(array);
+            if(array.length == 2){
+                list.add(true);
+                continue;
+            }
+            for(int j = 2; j < array.length; j++){
+                if(array[j] + array[j - 2]!=2*array[j-1]){
+                    list.add(false);
+                    a++;
+                    break;
+                }
+            }
+            if(a==0){
+                list.add(true);
+            }
+        }
+        return list;
+    }
+}
