@@ -25,6 +25,6 @@ class Solution {
                 list.add(true);
             }
         }
-        return list;
+        return list; 
     }
 }
