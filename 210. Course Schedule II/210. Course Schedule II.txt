@@ -3,6 +3,7 @@ class Solution {
     Map<Integer, Boolean> dfsVisited = new HashMap<>();
     Map<Integer, List<Integer>> map = new HashMap<>();
     Stack<Integer> stack = new Stack<>();
+    
     public int[] findOrder(int numCourses, int[][] prerequisites) {
         int[] ans = new int[numCourses];
         int n = prerequisites.length, u, v;
@@ -28,6 +29,7 @@ class Solution {
             ans[numCourses - 1] = stack.pop();
             numCourses--;
         }
+        
         return ans;
     }
     public boolean dfs(int a){
