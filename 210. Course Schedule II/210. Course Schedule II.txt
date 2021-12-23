@@ -1,0 +1,51 @@
+class Solution {
+    Map<Integer, Boolean> visited = new HashMap<>();
+    Map<Integer, Boolean> dfsVisited = new HashMap<>();
+    Map<Integer, List<Integer>> map = new HashMap<>();
+    Stack<Integer> stack = new Stack<>();
+    public int[] findOrder(int numCourses, int[][] prerequisites) {
+        int[] ans = new int[numCourses];
+        int n = prerequisites.length, u, v;
+        for(int i = 0; i < n; i++){
+            u = prerequisites[i][0];
+            v = prerequisites[i][1];
+            
+            if(map.getOrDefault(u, null) == null){
+                map.put(u, new ArrayList<>());
+            }
+            map.get(u).add(v);
+        }
+        
+        for(int i = 0; i < numCourses; i++){
+            if(!visited.getOrDefault(i, false)){
+                if(dfs(i)){
+                    return new int[0];
+                }
+            }
+        }
+        
+        while(!stack.isEmpty()){
+            ans[numCourses - 1] = stack.pop();
+            numCourses--;
+        }
+        return ans;
+    }
+    public boolean dfs(int a){
+        visited.put(a, true);
+        dfsVisited.put(a, true);
+        boolean flag = false;
+        if(map.getOrDefault(a, null)!=null){
+            for(Integer i : map.get(a)){
+                if(!visited.getOrDefault(i, false)){
+                    flag = flag | dfs(i);
+                }
+                else if(dfsVisited.getOrDefault(i, false)){
+                    flag = true;
+                }
+            }
+        }
+        dfsVisited.put(a, false);
+        stack.push(a);
+        return flag;
+    }
+}
