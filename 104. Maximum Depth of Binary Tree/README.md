@@ -1,4 +1,4 @@
-<h2>973. K Closest Points to Origin</h2><h3>Medium</h3><hr>
+<h2>104. Maximum Depth of Binary Tree</h2><h3>Easy</h3><hr>
 <div><p>Given the <code>root</code> of a binary tree, return <em>its maximum depth</em>.</p>
 
 <p>A binary tree's <strong>maximum depth</strong>&nbsp;is the number of nodes along the longest path from the root node down to the farthest leaf node.</p>
@@ -14,18 +14,6 @@
 
 <pre><strong>Input:</strong> root = [1,null,2]
 <strong>Output:</strong> 2
-</pre>
-
-<p><strong>Example 3:</strong></p>
-
-<pre><strong>Input:</strong> root = []
-<strong>Output:</strong> 0
-</pre>
-
-<p><strong>Example 4:</strong></p>
-
-<pre><strong>Input:</strong> root = [0]
-<strong>Output:</strong> 1
 </pre>
 
 <p>&nbsp;</p>
