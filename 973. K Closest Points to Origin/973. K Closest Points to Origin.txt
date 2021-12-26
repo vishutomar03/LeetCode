@@ -25,6 +25,6 @@ class Solution {
         }
         public int compareTo(answer o){
             return this.a - o.a;
-        }
+        } 
     }
 }
