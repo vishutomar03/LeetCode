@@ -8,8 +8,7 @@ class Solution {
                     c+=1;
                     b++;
                 }
-            
-                c = c%k;
+                c = c % k;
                 if(c==0){
                     return ans;
                 }
